@@ -4,6 +4,19 @@
 3. 슬라이드 전환, 텍스트 효과, 스케일 효과 완료
 4. 슬라이드 인디케이터 작업중
 
+- 0425
+1. 슬라이더 pagenation 
+
+
+
+
+
+
+
+
+
+
+
 https://swiperjs.com/get-started
 https://www.cdnpkg.com/Swiper/4.5.1
 https://inpa.tistory.com/entry/VS-Code-%E2%8F%B1%EF%B8%8F-HTML-CSS-%EB%8F%84%EA%B5%AC-%EC%B6%94%EC%B2%9C#px_to_rem__rpx_cssrem
