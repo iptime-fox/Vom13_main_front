@@ -1,5 +1,23 @@
+/*---------- HEADER HIDE AND SHOW ---------*/
+let prevScrollpos = window.pageYOffset;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', function () {
+  const currentScrollPos = window.pageYOffset;
+  if (currentScrollPos > 150) {
+    if (prevScrollpos > currentScrollPos) {
+      // 헤더 나타남
+      header.style.top = 0;
+    } else {
+      // 헤더 사라짐
+      header.style.top = -100 + '%';
+    }
+    prevScrollpos = currentScrollPos; // 마우스 이동 후 스크롤 위치값 재할당
+  }
+});
+
 /*---------- BEST ITEMS SLIDE ---------*/
-const swiper = new Swiper('.best-image-wrapper .swiper', {
+const bestArtSwiper = new Swiper('.best-image-wrapper .swiper', {
   slidesPerView: 4,
   spaceBetween: 15,
 

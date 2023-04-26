@@ -7,6 +7,10 @@
 - 0425
 1. 슬라이더 pagenation 
 
+- 0426
+aos 프레임워크
+호버효과
+헤더 hidden
 
 
 
@@ -20,3 +24,6 @@
 https://swiperjs.com/get-started
 https://www.cdnpkg.com/Swiper/4.5.1
 https://inpa.tistory.com/entry/VS-Code-%E2%8F%B1%EF%B8%8F-HTML-CSS-%EB%8F%84%EA%B5%AC-%EC%B6%94%EC%B2%9C#px_to_rem__rpx_cssrem
+
+w3scholls 참고해서 기능 추가하기(개인플젝)
+https://www.w3schools.com/howto/howto_js_accordion.asp
