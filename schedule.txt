@@ -23,6 +23,8 @@
 13. 게시판 //
 
 - 오류 사항 보고
+1. 탭 기능 오류 : 요소 가로 대비 세로 길이 동적 조정시 탭 실행 후 조정이 안되는 사항
+  -- 해결 : 탭 클릭 시 길이 조정 함수 적용
 
 - 결과 보고
 1. 주요 페이지 프로토타입
@@ -38,3 +40,5 @@
 
 - 랜딩페이지 터치스타트 만들기
 
+/* 긴 글 ...만 남기고 줄여주는 스타일
+display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 3; -webkit-box-orient: vertical; word-break: keep-all; overflow: hidden; */
