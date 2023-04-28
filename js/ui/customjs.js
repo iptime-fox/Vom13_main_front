@@ -19,6 +19,36 @@ window.addEventListener('scroll', function () {
   }
 });
 
+/*---------- MOBILE MENU HIDE AND SHOW ---------*/
+const mobileMenuIcon = document.querySelector('.menu-icon');
+const mobileOverlay = document.querySelector('.mobile-overlay');
+const mobileCloseIcon = document.querySelector('.close-icon');
+mobileMenuIcon.addEventListener('click', function (e) {
+  e.preventDefault(); // 스크롤 맨 위로 올라가는 디폴트 효과 막아줌
+  mobileOverlay.classList.add('on');
+  document.body.style.overflow = 'hidden'; // 메뉴 활성화 시, 모든 스크롤 멈춤
+});
+mobileCloseIcon.addEventListener('click', function (e) {
+  e.preventDefault();
+  mobileOverlay.classList.remove('on');
+  document.body.style.overflow = 'auto';
+});
+
+// target, currenttarget
+mobileOverlay.addEventListener('click', function (e) {
+  // console.log(e.target); // point to clicked element
+  // console.log(e.currentTarget); // point to uppest element(최상위)
+  if (
+    e.target.getAttribute('class') !== 'mobile-menus' &&
+    e.target.nodeName !== 'LI' &&
+    e.target.nodeName !== 'A' &&
+    e.target.nodeName !== 'IMG'
+  ) {
+    mobileOverlay.classList.remove('on');
+    document.body.style.overflow = 'auto';
+  }
+});
+
 /*---------- BEST ITEMS SLIDE ---------*/
 const bestArtSwiper = new Swiper('.best-image-wrapper .swiper', {
   slidesPerView: 4,
@@ -28,6 +58,23 @@ const bestArtSwiper = new Swiper('.best-image-wrapper .swiper', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
+  },
+  breakpoints: {
+    480: {
+      // 480 이하
+      slidesPerView: 1, // 보이는 슬라이드 갯수
+      slidesPerGroup: 1, // 하나의 페이지네이션에 묶이는 슬라이드 갯수
+    },
+    880: {
+      // 880 이하
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    1400: {
+      // 1400 이하
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
   },
 });
 
@@ -51,4 +98,28 @@ btns.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
     onTabs(idx);
   });
+});
+
+/*---------- NEW ART SLIDE ---------*/
+const newArtSwiper = new Swiper('.new-art-slider-wrapper .swiper', {
+  slidesPerView: 3,
+  spaceBetween: 20,
+
+  // breakpoints: {
+  //   480: {
+  //     // 480 이하
+  //     slidesPerView: 1, // 보이는 슬라이드 갯수
+  //     slidesPerGroup: 1, // 하나의 페이지네이션에 묶이는 슬라이드 갯수
+  //   },
+  //   880: {
+  //     // 880 이하
+  //     slidesPerView: 2,
+  //     slidesPerGroup: 2,
+  //   },
+  //   1400: {
+  //     // 1400 이하
+  //     slidesPerView: 3,
+  //     slidesPerGroup: 3,
+  //   },
+  // },
 });
