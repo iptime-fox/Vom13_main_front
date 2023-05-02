@@ -63,7 +63,8 @@ const bestArtSwiper = new Swiper('.best-image-wrapper .swiper', {
     480: {
       // 480 이하
       slidesPerView: 1, // 보이는 슬라이드 갯수
-      slidesPerGroup: 1, // 하나의 페이지네이션에 묶이는 슬라이드 갯수
+      slidesPerGroup: 1,
+      spaceBetween: 0, // 하나의 페이지네이션에 묶이는 슬라이드 갯수
     },
     880: {
       // 880 이하
@@ -104,22 +105,26 @@ btns.forEach((btn, idx) => {
 const newArtSwiper = new Swiper('.new-art-slider-wrapper .swiper', {
   slidesPerView: 3,
   spaceBetween: 20,
-
-  // breakpoints: {
-  //   480: {
-  //     // 480 이하
-  //     slidesPerView: 1, // 보이는 슬라이드 갯수
-  //     slidesPerGroup: 1, // 하나의 페이지네이션에 묶이는 슬라이드 갯수
-  //   },
-  //   880: {
-  //     // 880 이하
-  //     slidesPerView: 2,
-  //     slidesPerGroup: 2,
-  //   },
-  //   1400: {
-  //     // 1400 이하
-  //     slidesPerView: 3,
-  //     slidesPerGroup: 3,
-  //   },
-  // },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    480: {
+      // 480 이하
+      slidesPerView: 1, // 보이는 슬라이드 갯수
+      slidesPerGroup: 1,
+      spaceBetween: 0, // 하나의 페이지네이션에 묶이는 슬라이드 갯수
+    },
+    786: {
+      // 880 이하
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 10,
+    },
+  },
 });
