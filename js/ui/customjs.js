@@ -128,3 +128,17 @@ const newArtSwiper = new Swiper('.new-art-slider-wrapper .swiper', {
     },
   },
 });
+
+/*---------- DIRECT GALLERY TEXT EFFECT ---------*/
+const dgLetters = document.querySelectorAll('.direct-gallery-inside span');
+dgLetters.forEach((lt, i) => {
+  const delayIndex = i + 8;
+  if (delayIndex < 10) {
+    lt.style.animationDelay = `0.${delayIndex}s`;
+  } else {
+    lt.style.animationDelay = `${delayIndex / 10}s`;
+    // const strIndex = string(i);
+    // const strArr = [...strIndex];
+    // lt.style.animationDelay = `${strArr[0]}.${strArr[1]}s`;
+  }
+});
