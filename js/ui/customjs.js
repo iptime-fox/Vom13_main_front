@@ -52,7 +52,7 @@ setTimeout(() => {
 }, 300);
 /*---------- BEST ITEMS SLIDE ---------*/
 const isSwiper = document.querySelectorAll('.swiper-wrapper');
-if (isSwiper > 0) {
+if (isSwiper.length > 0) {
   const bestArtSwiper = new Swiper('.best-image-wrapper .swiper', {
     slidesPerView: 4,
     spaceBetween: 15,

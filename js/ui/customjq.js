@@ -72,7 +72,7 @@ $(function () {
     });
   }
   const isSwiper = $('.swiper-wrapper');
-  if (isSwiper > 10) {
+  if (isSwiper.length > 0) {
     visualSlider();
   }
 
