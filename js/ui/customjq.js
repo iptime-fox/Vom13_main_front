@@ -71,7 +71,10 @@ $(function () {
       $('.landing-slider').removeClass('load-init');
     });
   }
-  visualSlider();
+  const isSwiper = $('.swiper-wrapper');
+  if (isSwiper > 10) {
+    visualSlider();
+  }
 
   /*------- FITTING MD PICK IMAGE RATIO -------*/
   function fit2ImageRatio(el1, el2, elv1, elv2) {
