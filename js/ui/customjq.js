@@ -141,4 +141,11 @@ $(function () {
   $('.to-top').on('click', function () {
     $('html,body').animate({ scrollTop: 0 }, 'fast');
   });
+
+  /*------- LOADER EFFECT -------*/
+  $('.js-preloader').preloadinator({
+    minTime: 1000,
+    animation: 'fadeOut',
+    animationDuration: 400,
+  });
 });
