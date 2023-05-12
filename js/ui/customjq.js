@@ -147,9 +147,13 @@ $(function () {
   });
 
   /*------- LOADER EFFECT -------*/
-  $('.js-preloader').preloadinator({
-    minTime: 1000,
-    animation: 'fadeOut',
-    animationDuration: 400,
-  });
+  const isPreloader = $('.preloader');
+  if (isPreloader.length > 0) {
+    // (isPreloader !== null)
+    $('.js-preloader').preloadinator({
+      minTime: 1000,
+      animation: 'fadeOut',
+      animationDuration: 400,
+    });
+  }
 });
