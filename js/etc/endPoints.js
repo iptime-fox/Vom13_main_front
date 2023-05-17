@@ -1,9 +1,11 @@
 var endPoints = {
   register: {
-    signup: 'http://hanara123.dothome.co.kr/baexang_back/register/signup',
-    signin: 'http://hanara123.dothome.co.kr/baexang_back/register/signin',
-    signout: 'http://hanara123.dothome.co.kr/baexang_back/register/signout',
-    isSignin: 'http://hanara123.dothome.co.kr/baexang_back/register/is_signin',
+    signup: 'https://hanara123.cafe24.com/baexang_back/register/signup',
+    signin: 'https://hanara123.cafe24.com/baexang_back/register/signin',
+    signout: 'https://hanara123.cafe24.com/baexang_back/register/signout',
+    isSignin: 'https://hanara123.cafe24.com/baexang_back/register/is_signin',
+    checkAcsCode:
+      'https://hanara123.cafe24.com/baexang_back/register/check_admin_signin',
   },
   admin: {},
   productPictures: {},
