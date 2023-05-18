@@ -1,11 +1,12 @@
+const urlPath = document.location.href;
+const domain = new URL(urlPath).hostname;
 var endPoints = {
   register: {
-    signup: 'https://hanara123.cafe24.com/baexang_back/register/signup',
-    signin: 'https://hanara123.cafe24.com/baexang_back/register/signin',
-    signout: 'https://hanara123.cafe24.com/baexang_back/register/signout',
-    isSignin: 'https://hanara123.cafe24.com/baexang_back/register/is_signin',
-    checkAcsCode:
-      'https://hanara123.cafe24.com/baexang_back/register/check_admin_signin',
+    signup: `https://${domain}/baexang_back/register/signup`,
+    signin: `https://${domain}/baexang_back/register/signin`,
+    signout: `https://${domain}/baexang_back/register/signout`,
+    isSignin: `https://${domain}/baexang_back/register/is_signin`,
+    checkAcsCode: `https://${domain}/baexang_back/register/check_admin_signin`,
   },
   admin: {},
   productPictures: {},
