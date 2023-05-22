@@ -17,3 +17,5 @@ async function getRequest(url) {
     return response.json();
   });
 }
+
+/* ====== Common  Request Function ====== */
