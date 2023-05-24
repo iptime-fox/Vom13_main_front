@@ -27,3 +27,13 @@ async function putRequest(url, options) {
     return response.json();
   });
 }
+
+/* ====== Common DELETE Request Function ====== */
+async function deleteRequest(url, options) {
+  return await fetch(url, options).then((response) => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  });
+}

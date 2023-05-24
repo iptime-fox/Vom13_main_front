@@ -26,7 +26,7 @@ const getUserData = () => {
               <span class="name"><input type="text" value="${userInfo.user_name}" name="user_name"></span>
               <span class="lvl"><input type="text" value="${userInfo.user_lvl}" name="user_lvl"></span>
               <span class="update on"><input type="submit" value="수정"></span>
-              <span class="delete"><input type="button" value="삭제"></span>
+              <span class="delete on"><input type="button" value="삭제"></span>
             </form>
           </li>
         `;
@@ -99,4 +99,31 @@ const updateUserInfo = (userInfo) => {
   });
 };
 
-const deleteUser = (userInfo) => {};
+const deleteUser = (userInfo) => {
+  const deleteBtns = document.querySelectorAll('.delete.on');
+  deleteBtns.forEach((btn, i) => {
+    btn.addEventListener('click', async function () {
+      const idx = userInfo[i].user_idx;
+      const deleteUrl = endPoints.admin.deleteUser + '/' + idx;
+
+      const requestDeleteUser = async (url, jsonString) => {
+        const options = {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: jsonString,
+        };
+        try {
+          const data = await deleteRequest(url, options);
+          alert(data.msg);
+          location.reload();
+        } catch (error) {
+          console.error('Error', error);
+        }
+      };
+      requestDeleteUser(deleteUrl, null);
+    });
+  });
+};
