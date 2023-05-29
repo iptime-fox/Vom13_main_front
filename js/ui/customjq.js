@@ -114,16 +114,18 @@ $(function () {
   });
 
   /*------- FITTING NEW ART IMAGE RATIO -------*/
-  function fit1ImageRatio(el1, elv1) {
-    const fitElmtWidth = $(el1).width();
-    $(el1).height(fitElmtWidth * elv1);
-  }
+  setTimeout(() => {
+    function fit1ImageRatio(el1, elv1) {
+      const fitElmtWidth = $(el1).width();
+      $(el1).height(fitElmtWidth * elv1);
+    }
 
-  fit1ImageRatio('.new-art-image', 1.4);
-
-  $(window).on('resize', function () {
     fit1ImageRatio('.new-art-image', 1.4);
-  });
+
+    $(window).on('resize', function () {
+      fit1ImageRatio('.new-art-image', 1.4);
+    });
+  }, 2000);
 
   /*------- FITTING REVIEW IMAGE RATIO -------*/
   fit1ImageRatio('.review-image', 0.8);
