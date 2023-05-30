@@ -125,15 +125,14 @@ $(function () {
     $(window).on('resize', function () {
       fit1ImageRatio('.new-art-image', 1.4);
     });
-  }, 2000);
 
-  /*------- FITTING REVIEW IMAGE RATIO -------*/
-  fit1ImageRatio('.review-image', 0.8);
-
-  $(window).on('resize', function () {
+    /*------- FITTING REVIEW IMAGE RATIO -------*/
     fit1ImageRatio('.review-image', 0.8);
-  });
 
+    $(window).on('resize', function () {
+      fit1ImageRatio('.review-image', 0.8);
+    });
+  }, 2000);
   /*------- GO TO TOP -------*/
   $(window).on('scroll', function () {
     const sct = $(window).scrollTop();
