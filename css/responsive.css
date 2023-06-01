@@ -93,10 +93,10 @@
   /* Signup Page Style */
   .sign .form-wrapper{width: 90vw; }
 
-  /* Best Sub Page Style */
-  .best .best-lists{gap: 0.5rem;}
-  .best .best-content{width: calc(50% - 0.25rem); padding: 0.5rem;}
-  .best .best-info .item-price{font-size: 1.5rem; }
+  /* Product Sub Page Style */
+  .product .product-lists{gap: 0.5rem;}
+  .product .product-content{width: calc(50% - 0.25rem); padding: 0.5rem;}
+  .product .product-info .item-price{font-size: 1.5rem; }
 }
 
 @media screen and (max-width: 480px){
@@ -156,16 +156,16 @@
   .sign .form-wrapper .sign-msg a{font-size: 0.75rem;}
   .sign .form-wrapper .sign-msg a{padding: 0.75rem 1.8rem; }
 
-  /* Best Sub Page Style */
-  .best .best-list-wrapper{margin: 2rem auto 0;}
-  .best .list-title h3{font-size: 1.8rem; font-weight: 500; line-height: 2.5rem;}
-  .best .best-info .item-title,
-  .best .best-info .item-price{font-size: 1.2rem;}
-  .best .best-info{padding: var(--el-small) ;}
-  .best .best-info .item-by{margin-top: 0;}
+  /* Product Sub Page Style */
+  .product .product-list-wrapper{margin: 2rem auto 0;}
+  .product .list-title h3{font-size: 1.8rem; font-weight: 500; line-height: 2.5rem;}
+  .product .product-info .item-title,
+  .product .product-info .item-price{font-size: 1.2rem;}
+  .product .product-info{padding: var(--el-small) ;}
+  .product .product-info .item-by{margin-top: 0;}
 }
 
 @media screen and (max-width: 380px){
-  /* Best Sub Page Style */
-  .best .best-content{width: 100%; padding: 0.5rem;}
+  /* Product Sub Page Style */
+  .product .product-content{width: 100%; padding: 0.5rem;}
 }

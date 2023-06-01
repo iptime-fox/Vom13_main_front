@@ -135,11 +135,11 @@ $(function () {
       fit1ImageRatio('.review-image', 0.8);
     });
 
-    /*------- FITTING BEST PAGE RATIO -------*/
-    fit1ImageRatio('.best .best-image img', 1);
+    /*------- FITTING PRODUCT PAGE RATIO -------*/
+    fit1ImageRatio('.product .product-image img', 1);
 
     $(window).on('resize', function () {
-      fit1ImageRatio('.best .best-image img', 1);
+      fit1ImageRatio('.product .product-image img', 1);
     });
   }, 2000);
   /*------- GO TO TOP -------*/
