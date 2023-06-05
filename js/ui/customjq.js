@@ -141,6 +141,13 @@ $(function () {
     $(window).on('resize', function () {
       fit1ImageRatio('.product .product-image img', 1);
     });
+
+    /*------- FITTING PRODUCT SLIDER IMAGE RATIO -------*/
+    fit1ImageRatio('.product .swiper', 0.8);
+
+    $(window).on('resize', function () {
+      fit1ImageRatio('.product .swiper', 0.8);
+    });
   }, 2000);
   /*------- GO TO TOP -------*/
   $(window).on('scroll', function () {
