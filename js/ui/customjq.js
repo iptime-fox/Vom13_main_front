@@ -2,15 +2,17 @@ $(function () {
   /* -- 헤더 높이만큼 페딩 적용 */
   setTimeout(() => {
     const headerHeight = $('header').outerHeight();
-    $('.landing').css('padding-top', `${headerHeight}px`);
-    $('.sign-form').css('padding-top', `${headerHeight}px`);
-    $('.best .best-section').css('padding-top', `${headerHeight}px`);
+    $('.landing, .sign-form, .product .product-section, .detail .section').css(
+      'padding-top',
+      `${headerHeight}px`
+    );
   }, 300);
   $(window).on('resize', function () {
     const headerHeight = $('header').outerHeight();
-    $('.landing').css('padding-top', `${headerHeight}px`);
-    $('.sign-form').css('padding-top', `${headerHeight}px`);
-    $('.best .best-section').css('padding-top', `${headerHeight}px`);
+    $('.landing, .sign-form, .product .product-section, .detail .section').css(
+      'padding-top',
+      `${headerHeight}px`
+    );
   });
 
   // 메인 랜딩 슬라이더
@@ -148,6 +150,13 @@ $(function () {
     $(window).on('resize', function () {
       fit1ImageRatio('.product .swiper', 0.8);
     });
+
+    /*------- FITTING DETAIL PAGE HANG IMAGE RATIO -------*/
+    fit1ImageRatio('.detail .image-frame', 0.7);
+
+    $(window).on('resize', function () {
+      fit1ImageRatio('.detail .image-frame', 0.7);
+    });
   }, 2000);
   /*------- GO TO TOP -------*/
   $(window).on('scroll', function () {
@@ -161,6 +170,15 @@ $(function () {
 
   $('.to-top').on('click', function () {
     $('html,body').animate({ scrollTop: 0 }, 'fast');
+  });
+
+  /*------- DETAIL PAGE CHANGE BACKGROUND -------*/
+  $('.item-thumb-image span').on('click', function () {
+    $('.item-thumb-image span').removeClass('active');
+    $(this).addClass('active');
+
+    const imageUrl = $(this).find('img').attr('src');
+    $('.gallery-bg').attr('style', `background-image: url(${imageUrl})`);
   });
 
   /*------- LOADER EFFECT -------*/
