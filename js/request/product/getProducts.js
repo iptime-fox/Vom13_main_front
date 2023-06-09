@@ -9,7 +9,6 @@ async function getMainProduct(sortBy, selector, limit) {
 
   try {
     const data = await getRequest(getProductUrl);
-    console.log(data);
     const artLists = document.querySelector(selector);
     let artList = '';
 

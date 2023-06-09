@@ -157,6 +157,13 @@ $(function () {
     $(window).on('resize', function () {
       fit1ImageRatio('.detail .image-frame', 0.7);
     });
+
+    /*------- FITTING DETAIL PAGE INFO IMAGE RATIO -------*/
+    fit1ImageRatio('.detail .detail-info-image', 0.7);
+
+    $(window).on('resize', function () {
+      fit1ImageRatio('.detail .detail-info-image', 0.7);
+    });
   }, 2000);
   /*------- GO TO TOP -------*/
   $(window).on('scroll', function () {
