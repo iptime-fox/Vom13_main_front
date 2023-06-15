@@ -301,11 +301,22 @@
   </div> -->
 
   <script>
-    window.addEventListener('load', function(){
-      if(urlPath === `https://${domain}/baexang_front/`){
-       location.href = `https://${domain}/baexang_front/index.html`
+    window.onload = (event)=>{
+      
+      const userAgent = navigator.userAgent.toLowerCase();
+      let protocolName = '';
+      if(userAgent.indexOf('chrome') > -1){
+        protocolName = 'https';
+      } else {
+        protocolName = 'http';
+      } 
+
+      if(urlPath === `${domain}/baexang_front/`){
+        location.href = `${protocolName}://${domain}/baexang_front/index.html`;
+      }else if(urlPath === `${protocolName}://${domain}/baexang_front/`){
+        location.href = `${protocolName}://${domain}/baexang_front/index.html`;
       }
-    });
+    };
     
   </script>
   
@@ -319,6 +330,8 @@
 
   <script src="/baexang_front/js/etc/head-contents.js"></script>
   <script src="/baexang_front/js/request/product/getProducts.js"></script>
+
+  <!-- <script src="/baexang_front/js/etc/endPoints.js"></script> -->
 
 </body>
 </html>
