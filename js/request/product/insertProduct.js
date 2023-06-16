@@ -65,7 +65,7 @@ const insertProductData = () => {
     try {
       const data = await postRequest(url, options);
       alert(data.msg);
-      location.reload();
+      window.location.reload();
     } catch (error) {
       console.error('Error', error);
     }

@@ -164,7 +164,7 @@ $(function () {
     $(window).on('resize', function () {
       fit1ImageRatio('.detail .detail-info-image', 0.7);
     });
-  }, 2000);
+  }, 1200);
   /*------- GO TO TOP -------*/
   $(window).on('scroll', function () {
     const sct = $(window).scrollTop();
@@ -193,7 +193,7 @@ $(function () {
   if (isPreloader.length > 0) {
     // (isPreloader !== null)
     $('.js-preloader').preloadinator({
-      minTime: 1000,
+      minTime: 1500,
       animation: 'fadeOut',
       animationDuration: 400,
     });
